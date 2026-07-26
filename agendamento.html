@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="Informe seus dados e envie uma solicitação de agendamento para a Barbearia Simão pelo WhatsApp.">
+  <title>Agendar horário | Barbearia Simão</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/components.css">
+  <link rel="icon" href="img/logo-simao.png" type="image/png">
+</head>
+<body class="appointment-page">
+  <!-- Cabeçalho interno da etapa de agendamento. -->
+  <header class="inner-header">
+    <a class="brand" href="index.html"><img src="img/logo-simao.png" alt="" width="62" height="62"><span>Barbearia Simão</span></a>
+    <a class="text-link" href="index.html">Voltar ao site</a>
+  </header>
+
+  <main class="appointment-layout">
+    <!-- Contexto e orientação antes do preenchimento. -->
+    <section class="appointment-intro">
+      <p class="eyebrow">Solicitar agendamento</p>
+      <h1>Conte como podemos cuidar do seu <em>estilo.</em></h1>
+      <p>Preencha os dados abaixo. Ao continuar, uma mensagem organizada será aberta no WhatsApp da Barbearia Simão.</p>
+      <div class="appointment-note"><strong>Importante</strong><span>O envio da mensagem não confirma automaticamente o horário. Nossa equipe responderá para combinar a disponibilidade.</span></div>
+    </section>
+
+    <!-- Formulário único usado por todos os botões de agendamento do site. -->
+    <form class="appointment-form" id="appointmentForm">
+      <div class="field field-full">
+        <label for="name">Nome completo</label>
+        <input id="name" name="name" type="text" autocomplete="name" required placeholder="Como podemos chamar você?">
+      </div>
+      <div class="field">
+        <label for="phone">Celular</label>
+        <input id="phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required placeholder="(31) 99999-9999">
+      </div>
+      <div class="field">
+        <label for="birthDate">Data de nascimento</label>
+        <input id="birthDate" name="birthDate" type="date" autocomplete="bday" required>
+      </div>
+      <div class="field">
+        <label for="professional">Profissional</label>
+        <select id="professional" name="professional" required>
+          <option value="">Escolha um profissional</option>
+          <option>Daniel</option><option>Delonge</option><option>João</option><option>Junin</option><option>Samuel</option>
+          <option>Sem preferência</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="service">Serviço</label>
+        <select id="service" name="service" required>
+          <option value="">Escolha um serviço</option>
+          <optgroup label="Cortes"><option>Corte</option><option>Corte afro</option><option>Corte + desenho</option><option>Corte + sobrancelha</option></optgroup>
+          <optgroup label="Barba"><option>Barba</option><option>Barba express</option><option>Barba + pezinho</option><option>Barba + sobrancelha</option><option>Barba + pezinho + sobrancelha</option></optgroup>
+          <optgroup label="Combos"><option>Corte + barba</option><option>Corte + barba express</option><option>Corte + barba + sobrancelha</option><option>Combo Essencial</option></optgroup>
+          <optgroup label="Cuidados"><option>Alisamento</option><option>Hidratação</option><option>Selagem</option><option>Tintura</option><option>Limpeza de pele</option><option>Pezinho</option><option>Sobrancelha</option><option>Pigmentação de barba</option><option>Depilação de nariz e orelha</option></optgroup>
+          <optgroup label="Planos"><option>Conhecer planos de assinatura</option></optgroup>
+        </select>
+      </div>
+      <button class="button field-full" type="submit">Continuar no WhatsApp</button>
+      <p class="privacy-copy field-full">Seus dados são usados somente para montar a mensagem e não ficam armazenados neste site.</p>
+    </form>
+  </main>
+
+  <script src="js/agendamento.js"></script>
+</body>
+</html>

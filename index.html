@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="style/components.css">
   <link rel="icon" href="img/logo-simao.png" type="image/png">
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Barbershop","name":"Barbearia Simão","foundingDate":"2016","description":"Barba, cabelo e bigode em Belo Horizonte.","sameAs":["https://www.instagram.com/_barbeariasimao/"],"department":[{"@type":"Barbershop","name":"Barbearia Simão — São Geraldo","address":{"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"}},{"@type":"Barbershop","name":"Barbearia Simão — Sagrada Família","address":{"@type":"PostalAddress","addressLocality":"Belo Horizonte","addressRegion":"MG","addressCountry":"BR"}}]}
@@ -17,6 +18,7 @@
 </head>
 <body>
   <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <!-- Cabeçalho global: navegação compacta e CTA direto para o WhatsApp. -->
   <header class="header" id="inicio">
     <a class="brand" href="#inicio" aria-label="Barbearia Simão, início">
       <img src="img/logo-simao.png" alt="" width="72" height="72">
@@ -26,13 +28,15 @@
     <nav aria-label="Navegação principal">
       <a href="#experiencia">A experiência</a>
       <a href="#servicos">Serviços</a>
+      <a href="#profissionais">Profissionais</a>
       <a href="#unidades">Unidades</a>
       <a href="#galeria">Galeria</a>
     </nav>
-    <a class="button button-small" href="#agendar">Agendar agora</a>
+    <a class="button button-small" href="agendamento.html">Agendar agora</a>
   </header>
 
   <main id="conteudo">
+    <!-- Hero: proposta de valor e principal ponto de conversão. -->
     <section class="hero">
       <div class="hero-media" role="img" aria-label="Barbeiro trabalhando em um corte masculino"></div>
       <div class="hero-overlay"></div>
@@ -41,17 +45,19 @@
         <h1>Seu estilo.<br><em>Nossa assinatura.</em></h1>
         <p class="hero-copy">Do clássico ao atual, cada detalhe é pensado para você sair na sua melhor versão.</p>
         <div class="hero-actions">
-          <a class="button" href="#agendar">Escolher uma unidade</a>
+          <a class="button" href="agendamento.html">Solicitar agendamento</a>
           <a class="text-link" href="#experiencia">Conheça a Simão <span>↓</span></a>
         </div>
       </div>
       <div class="hero-proof"><strong>2</strong><span>unidades<br>em BH</span></div>
     </section>
 
+    <!-- Faixa visual com as especialidades da marca. -->
     <section class="marquee" aria-label="Especialidades">
       <div>BARBA <i>✦</i> CABELO <i>✦</i> BIGODE <i>✦</i> ATITUDE <i>✦</i> BARBA <i>✦</i> CABELO <i>✦</i> BIGODE</div>
     </section>
 
+    <!-- Apresentação institucional e números principais. -->
     <section class="experience section" id="experiencia">
       <div>
         <p class="eyebrow">Mais que um corte</p>
@@ -67,28 +73,66 @@
       </div>
     </section>
 
+    <!-- Serviços em destaque; cada card abre a tabela completa de preços. -->
     <section class="services section" id="servicos">
       <p class="eyebrow">Serviços</p>
       <div class="section-heading">
         <h2>Precisão em cada <em>detalhe.</em></h2>
-        <p>Consulte serviços, profissionais, horários e valores atualizados diretamente no aplicativo.</p>
+        <p>Clique em uma categoria para consultar todos os serviços, valores e duração.</p>
       </div>
       <div class="service-grid">
-        <article><span>01</span><h3>Corte</h3><p>Clássico, social, degradê ou a tendência que combina com você.</p></article>
-        <article><span>02</span><h3>Barba</h3><p>Desenho, alinhamento e acabamento para valorizar seus traços.</p></article>
-        <article><span>03</span><h3>Combo</h3><p>Cabelo e barba em uma experiência completa, sem pressa.</p></article>
-        <article><span>04</span><h3>Acabamento</h3><p>Contorno limpo e visual renovado para manter o corte em dia.</p></article>
+        <a href="servicos.html#cortes"><article><span>01</span><h3>Corte</h3><p>Clássico, social, degradê ou a tendência que combina com você.</p><b>Ver preços →</b></article></a>
+        <a href="servicos.html#barbas"><article><span>02</span><h3>Barba</h3><p>Desenho, alinhamento e acabamento para valorizar seus traços.</p><b>Ver preços →</b></article></a>
+        <a href="servicos.html#combos"><article><span>03</span><h3>Combos</h3><p>Cabelo e barba em uma experiência completa, sem pressa.</p><b>Ver preços →</b></article></a>
+        <a href="servicos.html#cuidados"><article><span>04</span><h3>Cuidados</h3><p>Hidratação, pigmentação, depilação e outros detalhes.</p><b>Ver preços →</b></article></a>
+      </div>
+      <a class="button services-button" href="servicos.html">Ver tabela completa de serviços</a>
+    </section>
+
+    <!-- Clube Simão: planos recorrentes disponíveis no AppBarber. -->
+    <section class="plans section" id="assinaturas">
+      <p class="eyebrow">Clube Simão</p>
+      <div class="section-heading">
+        <h2>Visual em dia, todo <em>mês.</em></h2>
+        <p>Planos por assinatura da unidade São Geraldo. Consulte regras e disponibilidade antes da contratação.</p>
+      </div>
+      <div class="plans-grid">
+        <article><span>Smart</span><h3>Barba Smart</h3><strong>R$ 79,90<small>/mês</small></strong></article>
+        <article><span>Smart</span><h3>Corte Smart</h3><strong>R$ 79,90<small>/mês</small></strong></article>
+        <article class="plan-featured"><span>Smart</span><h3>Corte e Barba</h3><strong>R$ 139,90<small>/mês</small></strong></article>
+        <article><span>Black</span><h3>Corte Black</h3><strong>R$ 99,90<small>/mês</small></strong></article>
+        <article><span>Black</span><h3>Barba Black</h3><strong>R$ 89,90<small>/mês</small></strong></article>
+        <article><span>Black</span><h3>Corte e Barba</h3><strong>R$ 179,90<small>/mês</small></strong></article>
+      </div>
+      <a class="button button-outline" href="agendamento.html?servico=Conhecer%20planos%20de%20assinatura">Conhecer os planos</a>
+    </section>
+
+    <!-- Equipe: profissionais divulgados no agendamento oficial. -->
+    <section class="team section" id="profissionais">
+      <p class="eyebrow">Nossa equipe</p>
+      <div class="section-heading">
+        <h2>Escolha seu <em>profissional.</em></h2>
+        <p>Conheça os barbeiros da unidade São Geraldo e encontre quem combina com seu estilo.</p>
+      </div>
+      <div class="team-grid">
+        <article><img src="img/profissionais/daniel.webp" alt="Daniel, profissional da Barbearia Simão" loading="lazy" width="720" height="720"><div><h3>Daniel</h3><a href="agendamento.html?profissional=Daniel">Agendar →</a></div></article>
+        <article><img src="img/profissionais/delonge.webp" alt="Delonge, profissional da Barbearia Simão" loading="lazy" width="480" height="480"><div><h3>Delonge</h3><a href="agendamento.html?profissional=Delonge">Agendar →</a></div></article>
+        <article><img src="img/profissionais/joao.webp" alt="João, profissional da Barbearia Simão" loading="lazy" width="720" height="720"><div><h3>João</h3><a href="agendamento.html?profissional=João">Agendar →</a></div></article>
+        <article><img src="img/profissionais/junin.webp" alt="Junin, profissional da Barbearia Simão" loading="lazy" width="720" height="720"><div><h3>Junin</h3><a href="agendamento.html?profissional=Junin">Agendar →</a></div></article>
+        <article><img src="img/profissionais/samuel.webp" alt="Samuel, profissional da Barbearia Simão" loading="lazy" width="720" height="720"><div><h3>Samuel</h3><a href="agendamento.html?profissional=Samuel">Agendar →</a></div></article>
       </div>
     </section>
 
+    <!-- Conversão: WhatsApp e aplicativos oficiais. -->
     <section class="booking section" id="agendar">
       <div class="booking-copy">
         <p class="eyebrow">Agendamento fácil</p>
         <h2>Seu próximo corte está a poucos <em>toques.</em></h2>
         <p>Escolha como prefere agendar. Pelo site atual da barbearia ou pelo AppBarber no seu celular.</p>
         <div class="booking-actions">
-          <a class="button" href="https://sites.appbarber.com.br/simaobarbearia-w7ee" target="_blank" rel="noopener">Agendar online</a>
+          <a class="button" href="agendamento.html">Solicitar agendamento</a>
           <a class="button button-outline" href="https://play.google.com/store/apps/details?id=br.com.starapp.appbarbercli&pli=1" target="_blank" rel="noopener">Baixar para Android</a>
+          <a class="button button-outline" href="https://apps.apple.com/br/app/appbarber-cliente/id6450795073" target="_blank" rel="noopener">Baixar para iPhone</a>
         </div>
         <small>Ao abrir o AppBarber, procure por “Barbearia Simão” e selecione a unidade desejada.</small>
       </div>
@@ -100,6 +144,7 @@
       </div>
     </section>
 
+    <!-- Unidades e mapas fornecidos pelo cliente. -->
     <section class="locations section" id="unidades">
       <p class="eyebrow">Perto de você</p>
       <div class="section-heading">
@@ -111,42 +156,56 @@
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60027.00718963115!2d-43.92686918311708!3d-19.895394326441767!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69b32042d4dc3%3A0xfa0cc9753b2f5d54!2sBarbearia%20Sim%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1785077414143!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa da Barbearia Simão no São Geraldo"></iframe>
           </div>
-          <div class="location-content"><span>Unidade 01</span><h3>São Geraldo</h3><a href="https://www.google.com/maps/search/?api=1&query=Barbearia+Simão+São+Geraldo+Belo+Horizonte" target="_blank" rel="noopener">Abrir rota ↗</a></div>
+          <div class="location-content"><span>Unidade 01</span><h3>São Geraldo</h3><p>Rua Silva Alvarenga, 487 — São Geraldo, Belo Horizonte/MG</p><a href="https://www.google.com/maps/search/?api=1&query=-19.8996582%2C-43.89798355" target="_blank" rel="noopener">Abrir rota ↗</a></div>
         </article>
         <article>
           <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d60022.33780176346!2d-43.99559245136718!3d-19.907705899999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69b15dfae6347%3A0xaed343500403804b!2sBarbearia%20Sim%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1785077443140!5m2!1spt-BR!2sbr" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" title="Mapa da Barbearia Simão no Sagrada Família"></iframe>
           </div>
-          <div class="location-content"><span>Unidade 02</span><h3>Sagrada Família</h3><a href="https://www.google.com/maps/search/?api=1&query=Barbearia+Simão+Sagrada+Família+Belo+Horizonte" target="_blank" rel="noopener">Abrir rota ↗</a></div>
+          <div class="location-content"><span>Unidade 02</span><h3>Sagrada Família</h3><p>Rua Pitangui, 3098 — Sagrada Família, Belo Horizonte/MG</p><a href="https://www.google.com/maps/search/?api=1&query=Barbearia+Simão+Sagrada+Família+Belo+Horizonte" target="_blank" rel="noopener">Abrir rota ↗</a></div>
         </article>
       </div>
     </section>
 
+    <!-- Avaliação pública disponível no AppBarber. -->
+    <section class="reviews section" id="avaliacoes">
+      <div class="rating-summary"><strong>5,0</strong><span>★★★★★</span><p>Nota exibida no perfil oficial do AppBarber</p></div>
+      <div>
+        <p class="eyebrow">Avaliações</p>
+        <h2>A confiança começa no <em>atendimento.</em></h2>
+        <p>O perfil oficial ainda não possui comentários públicos escritos. Depois da sua visita, compartilhe sua experiência e ajude outros clientes.</p>
+        <a class="button" href="agendamento.html">Agendar uma experiência</a>
+      </div>
+    </section>
+
+    <!-- Galeria local formada por publicações públicas do Instagram da barbearia. -->
     <section class="gallery section" id="galeria">
       <div class="section-heading">
         <div><p class="eyebrow">Inspiração</p><h2>Seu próximo <em>visual.</em></h2></div>
         <a class="text-link" href="https://www.instagram.com/_barbeariasimao/" target="_blank" rel="noopener">Ver no Instagram ↗</a>
       </div>
-      <div class="gallery-grid">
-        <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=900&q=80" alt="Barbeiro fazendo acabamento na barba" loading="lazy" width="900" height="1100">
-        <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=900&q=80" alt="Corte masculino em barbearia" loading="lazy" width="900" height="1100">
-        <img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=900&q=80" alt="Acabamento de corte masculino" loading="lazy" width="900" height="1100">
+      <div class="gallery-grid gallery-cuts">
+        <a href="https://www.instagram.com/_barbeariasimao/p/DWyxnWkDMeG/" target="_blank" rel="noopener"><img src="img/instagram/corte-degrade-barba.jpg" alt="Corte degradê com acabamento de barba feito pela Barbearia Simão" loading="lazy" width="640" height="799"></a>
+        <a href="https://www.instagram.com/_barbeariasimao/p/DWHee4kiYtL/" target="_blank" rel="noopener"><img src="img/instagram/corte-social.jpg" alt="Corte social feito pela Barbearia Simão" loading="lazy" width="640" height="799"></a>
+        <a href="https://www.instagram.com/_barbeariasimao/p/DVqrL-YlvOf/" target="_blank" rel="noopener"><img src="img/instagram/corte-infantil.jpg" alt="Corte infantil moderno feito pela Barbearia Simão" loading="lazy" width="640" height="799"></a>
       </div>
     </section>
 
+    <!-- Chamada final para reforçar o agendamento. -->
     <section class="final-cta">
       <img src="img/logo-simao.png" alt="Barbearia Simão" loading="lazy" width="210" height="210">
       <p class="eyebrow">Barba · cabelo · bigode</p>
       <h2>Pronto para renovar?</h2>
-      <a class="button" href="#agendar">Agendar meu horário</a>
+      <a class="button" href="agendamento.html">Agendar meu horário</a>
     </section>
   </main>
 
+  <!-- Rodapé com atalhos institucionais. -->
   <footer>
     <div><strong>Barbearia Simão</strong><span>Desde 2016 · Belo Horizonte, MG</span></div>
-    <div><a href="links.html">Link da bio</a><a href="https://www.instagram.com/_barbeariasimao/" target="_blank" rel="noopener">Instagram</a><a href="#unidades">Unidades</a></div>
+    <div><a href="links.html">Link da bio</a><a href="servicos.html">Preços</a><a href="https://www.instagram.com/_barbeariasimao/" target="_blank" rel="noopener">Instagram</a><a href="#unidades">Unidades</a></div>
     <p>© <span id="year"></span> Barbearia Simão. Todos os direitos reservados.</p>
   </footer>
-  <script src="app.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

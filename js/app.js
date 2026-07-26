@@ -1,3 +1,9 @@
+/**
+ * Comportamentos globais do site:
+ * - abre e fecha o menu em telas pequenas;
+ * - fecha o menu após a navegação;
+ * - mantém o ano do rodapé atualizado.
+ */
 const header = document.querySelector(".header");
 const menuButton = document.querySelector(".menu-button");
 
